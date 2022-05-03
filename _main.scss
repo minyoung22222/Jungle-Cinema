@@ -1,6 +1,11 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 body {
     background-color: #fff;
     padding-top: 86px;
+    
 }
 
 .ir {
@@ -40,15 +45,14 @@ main {
         display: flex;
         justify-content: center;
         gap: 60px;
-    }
-
-    h2 {
-        font-weight: 900;
-        line-height: 19px;
-        font-size: 1rem;
-        color: #828282;
-        &:nth-child(1) {
-            color: #000;
+        h2 {
+            font-weight: 900;
+            line-height: 19px;
+            font-size: 1rem;
+            color: #828282;
+            &:nth-child(1) {
+                color: #000;
+            }
         }
     }
 }
@@ -59,12 +63,104 @@ main {
     border: 2px solid #BDBDBD;
     box-sizing: border-box;
     border-radius: 15px;
-    display: flex;
-    
+    display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 23px;
+    padding: 26px 27px 30px;
     li {
         border: 1px solid #BDBDBD;
         box-sizing: border-box;
-        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+        // filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
         border-radius: 10px;
+
+        .movie_img {
+            display: block;
+            margin: 19px 20px 11px;
+            width: 180px;
+            border: 1px solid #BDBDBD;
+            box-sizing: border-box;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 10px;
+        }
+        .movie_title {
+            display: block;
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 23px;
+            text-align: center;
+        }
+        .contents {
+            padding: 12px 20px 18px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .contents_title {
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 19px;
+                color: #828282;
+                
+                .content_detail {
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 19px;
+                    color: #000;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .movie_btns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            
+            .ticketing_btn {
+                background: #F2F2F2;
+                // border: 1px solid #BDBDBD;
+                border: 0;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 500;
+                padding: 9px 0 12px;
+                // border-radius: 0 0 0 10px;
+                // &:nth-child(2) {
+                //     border-radius: 0 0 10px 0;
+                // }
+                img {
+                    width: 16px;
+                    margin: 2px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        
+    }
+}
+
+.footer {
+    margin-top: 135px;
+    padding: 53px 366px 38px;
+    background: #F2F2F2;
+    .cinema_name {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .sns_img {
+        width: 24px;
+        float: right;
+        &:nth-child(2) {
+            margin: 0 22px 0;
+        }
+    }
+    .footer_content, .company {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        color: #4F4F4F;
+    }
+
+    .company {
+        text-align: right;
     }
 }

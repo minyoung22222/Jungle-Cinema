@@ -6,6 +6,10 @@ ul {
   list-style: none;
 }
 
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 body {
   background-color: #fff;
   padding-top: 86px;
@@ -57,14 +61,14 @@ main .nav {
   gap: 60px;
 }
 
-main h2 {
+main .nav h2 {
   font-weight: 900;
   line-height: 19px;
   font-size: 1rem;
   color: #828282;
 }
 
-main h2:nth-child(1) {
+main .nav h2:nth-child(1) {
   color: #000;
 }
 
@@ -75,17 +79,119 @@ main h2:nth-child(1) {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 23px;
+  padding: 26px 27px 30px;
 }
 
 .movie_chart li {
   border: 1px solid #BDBDBD;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
-          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
   border-radius: 10px;
+}
+
+.movie_chart li .movie_img {
+  display: block;
+  margin: 19px 20px 11px;
+  width: 180px;
+  border: 1px solid #BDBDBD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+}
+
+.movie_chart li .movie_title {
+  display: block;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.movie_chart li .contents {
+  padding: 12px 20px 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.movie_chart li .contents .contents_title {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: #828282;
+}
+
+.movie_chart li .contents .contents_title .content_detail {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: #000;
+  margin-left: 5px;
+}
+
+.movie_chart li .movie_btns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.movie_chart li .movie_btns .ticketing_btn {
+  background: #F2F2F2;
+  border: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 9px 0 12px;
+}
+
+.movie_chart li .movie_btns .ticketing_btn img {
+  width: 16px;
+  margin: 2px;
+  vertical-align: middle;
+}
+
+.footer {
+  margin-top: 135px;
+  padding: 53px 366px 38px;
+  background: #F2F2F2;
+}
+
+.footer .cinema_name {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.footer .sns_img {
+  width: 24px;
+  float: right;
+}
+
+.footer .sns_img:nth-child(2) {
+  margin: 0 22px 0;
+}
+
+.footer .footer_content, .footer .company {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4F4F4F;
+}
+
+.footer .company {
+  text-align: right;
 }
 /*# sourceMappingURL=style.css.map */
