@@ -162,6 +162,16 @@ main {
         span {
             font-weight: 400;
         }
+        @at-root .virtual::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 16px;
+            margin: 0 4px;
+            font-weight: 400;
+            vertical-align:text-bottom;
+            background-color: #4F4F4F;
+        }
     }
 
     .company {
