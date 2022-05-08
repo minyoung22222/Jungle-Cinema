@@ -1,4 +1,4 @@
-body, h1, h2 {
+body, h1, h2, dl, dd {
   margin: 0;
 }
 
@@ -19,10 +19,6 @@ button {
 body {
   background-color: #fff;
   padding-top: 86px;
-}
-
-.ir {
-  display: none;
 }
 
 main {
@@ -100,6 +96,8 @@ main .nav h2:nth-child(1) {
           box-sizing: border-box;
   border-radius: 10px;
   overflow: hidden;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 .movie_chart li .movie_img {
@@ -107,7 +105,7 @@ main .nav h2:nth-child(1) {
   margin: 19px 20px 11px;
   width: 180px;
   height: 250px;
-  border: 1px solid #BDBDBD;
+  outline: 1px solid #BDBDBD;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -120,7 +118,7 @@ main .nav h2:nth-child(1) {
   font-weight: 900;
   font-size: 16px;
   line-height: 23px;
-  text-align: center;
+  padding-left: 20px;
 }
 
 .movie_chart li .contents {
@@ -202,19 +200,39 @@ main .nav h2:nth-child(1) {
   color: #4F4F4F;
 }
 
-.footer .footer_content span, .footer .company span {
+.footer .footer_content div, .footer .footer_content dt, .footer .footer_content dd {
+  display: inline-block;
+}
+
+.footer .footer_content dt {
+  margin-right: 4px;
+}
+
+.footer .footer_content dd {
   font-weight: 400;
 }
 
-.virtual::after {
+.footer .footer_content .bold {
+  font-weight: 700;
+}
+
+.footer .footer_content dd::after {
   content: "";
   display: inline-block;
   width: 1px;
   height: 16px;
-  margin: 0 4px;
   font-weight: 400;
+  margin: 0 8px;
   vertical-align: text-bottom;
   background-color: #4F4F4F;
+}
+
+.footer .footer_content > div:last-of-type dd::after {
+  display: none;
+}
+
+.footer .footer_content .ir {
+  display: none;
 }
 
 .footer .company {
